@@ -1,0 +1,138 @@
+import java.awt.EventQueue;
+
+import javax.swing.JFrame;
+import javax.swing.JButton;
+import java.awt.BorderLayout;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
+import javax.swing.JTextField;
+
+public class calc {
+
+	private JFrame frame;
+	private JTextField textresultado;
+
+	/**
+	 * Launch the application.
+	 */
+	public static void main(String[] args) {
+		EventQueue.invokeLater(new Runnable() {
+			public void run() {
+				try {
+					calc window = new calc();
+					window.frame.setVisible(true);
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+		});
+	}
+
+	/**
+	 * Create the application.
+	 */
+	public calc() {
+		initialize();
+	}
+
+	/**
+	 * Initialize the contents of the frame.
+	 */
+	private void initialize() {
+		frame = new JFrame();
+		frame.setBounds(100, 100, 450, 300);
+		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		frame.getContentPane().setLayout(null);
+		
+		JButton button1 = new JButton("1");
+		button1.setBounds(55, 182, 48, 23);
+		frame.getContentPane().add(button1);
+		
+		JButton button2 = new JButton("2");
+		button2.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+			}
+		});
+		button2.setBounds(126, 182, 48, 23);
+		frame.getContentPane().add(button2);
+		
+		JButton button3 = new JButton("3");
+		button3.setBounds(198, 182, 48, 23);
+		frame.getContentPane().add(button3);
+		
+		JButton button4 = new JButton("4");
+		button4.setBounds(55, 148, 48, 23);
+		frame.getContentPane().add(button4);
+		
+		JButton button5 = new JButton("5");
+		button5.setBounds(126, 148, 48, 23);
+		frame.getContentPane().add(button5);
+		
+		JButton button6 = new JButton("6");
+		button6.setBounds(198, 148, 48, 23);
+		frame.getContentPane().add(button6);
+		
+		JButton button7 = new JButton("7");
+		button7.setBounds(55, 114, 48, 23);
+		frame.getContentPane().add(button7);
+		
+		JButton button8 = new JButton("8");
+		button8.setBounds(126, 114, 48, 23);
+		frame.getContentPane().add(button8);
+		
+		JButton button9 = new JButton("9");
+		button9.setBounds(198, 114, 48, 23);
+		frame.getContentPane().add(button9);
+		
+		JButton button0 = new JButton("0");
+		button0.setBounds(55, 214, 119, 23);
+		frame.getContentPane().add(button0);
+		
+		JButton button_igual = new JButton("=");
+		button_igual.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+			}
+		});
+		button_igual.setBounds(314, 148, 48, 89);
+		frame.getContentPane().add(button_igual);
+		
+		JButton button_div = new JButton("/");
+		button_div.setBounds(256, 214, 48, 23);
+		frame.getContentPane().add(button_div);
+		
+		JButton button_mult = new JButton("*");
+		button_mult.setBounds(256, 182, 48, 23);
+		frame.getContentPane().add(button_mult);
+		
+		JButton button_resta = new JButton("-");
+		button_resta.setBounds(198, 214, 48, 23);
+		frame.getContentPane().add(button_resta);
+		
+		JButton button_suma = new JButton("+");
+		button_suma.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+			}
+		});
+		button_suma.setBounds(256, 148, 48, 23);
+		frame.getContentPane().add(button_suma);
+		
+		textresultado = new JTextField();
+		textresultado.setEditable(false);
+		textresultado.setBounds(55, 62, 307, 32);
+		frame.getContentPane().add(textresultado);
+		textresultado.setColumns(10);
+		
+		JButton btnCe = new JButton("CE");
+		btnCe.setBounds(256, 114, 48, 23);
+		frame.getContentPane().add(btnCe);
+		
+		JButton btnC = new JButton("C");
+		btnC.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+			}
+		});
+		btnC.setBounds(314, 114, 48, 23);
+		frame.getContentPane().add(btnC);
+	}
+
+}
